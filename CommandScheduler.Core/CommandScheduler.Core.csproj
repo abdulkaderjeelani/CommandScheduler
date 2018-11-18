@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6B84C08-5BB4-4EB7-9E4C-BB3A903E1272}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommandScheduler.Core</RootNamespace>
+    <AssemblyName>CommandScheduler.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\CommandAggregate.cs" />
+    <Compile Include="Domain\Entities\Network.cs" />
+    <Compile Include="Domain\Events\ClientRegistered.cs" />
+    <Compile Include="Domain\IClientFactory.cs" />
+    <Compile Include="Domain\NetworkAggregate.cs" />
+    <Compile Include="Domain\Commands\RunScheduledCommand.cs" />
+    <Compile Include="Domain\Commands\RegisterClientMachine.cs" />
+    <Compile Include="Domain\Commands\RemoveClientMachineRegistration.cs" />
+    <Compile Include="Domain\Commands\ScheduleCommand.cs" />
+    <Compile Include="Domain\Commands\StoreCommandResult.cs" />
+    <Compile Include="Domain\Commands\UnScheduleCommand.cs" />
+    <Compile Include="Domain\Entities\ClientMachine.cs" />
+    <Compile Include="Domain\Entities\CommandToExecute.cs" />
+    <Compile Include="Domain\Events\ClientRemoved.cs" />
+    <Compile Include="Domain\Events\CommandScheduled.cs" />
+    <Compile Include="Domain\Events\CommandUnScheduled.cs" />
+    <Compile Include="Domain\Specifications\NetworkSpecs.cs" />
+    <Compile Include="Domain\ValueObjects\CommandResult.cs" />
+    <Compile Include="Domain\ValueObjects\OperatingSystemNames.cs" />
+    <Compile Include="Domain\ValueObjects\ScheduleInstruction.cs" />
+    <Compile Include="Ports\IPostCommandService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommandScheduler.SharedKernel\CommandScheduler.SharedKernel.csproj">
+      <Project>{262E4DD3-DAA8-420D-9854-7ADABE52D756}</Project>
+      <Name>CommandScheduler.SharedKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommandScheduler.Utilities\CommandScheduler.Utilities.csproj">
+      <Project>{8fb0e612-f402-4fc3-871f-7c89bf58fb69}</Project>
+      <Name>CommandScheduler.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

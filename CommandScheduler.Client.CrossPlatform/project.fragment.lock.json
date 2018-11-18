@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exports": {
+    "CommandScheduler.Client.Portable/1.0.0": {
+      "type": "project",
+      "framework": ".NETStandard,Version=v1.3",
+      "compile": {
+        "bin/Debug/CommandScheduler.Client.Portable.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/CommandScheduler.Client.Portable.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/CommandScheduler.Client.Portable.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}

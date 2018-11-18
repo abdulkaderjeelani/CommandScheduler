@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8427b2fb-64f9-4d9a-b65d-8eed9903b769" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.pipe://localhost/CommandService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="03db509d-ee7c-42e8-8817-8fd5b712cf26" SourceId="1" SourceUrl="net.pipe://localhost/CommandService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f4b65011-ca54-4198-a132-002750ef37e8" SourceId="1" SourceUrl="net.pipe://localhost/CommandService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="d56f4a22-86dc-4949-8854-73e52defeecf" SourceId="1" SourceUrl="net.pipe://localhost/CommandService/mex" />
+    <MetadataFile FileName="CommandScheduler.Infrastructure.Server.DataContracts.xsd" MetadataType="Schema" ID="17cdce07-ef4f-4020-ad47-f1f0672e72a2" SourceId="1" SourceUrl="net.pipe://localhost/CommandService/mex" />
+    <MetadataFile FileName="CommandScheduler.Infrastructure.Server.Response.xsd" MetadataType="Schema" ID="1a3fdffc-5c01-46ed-b9de-236865348365" SourceId="1" SourceUrl="net.pipe://localhost/CommandService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

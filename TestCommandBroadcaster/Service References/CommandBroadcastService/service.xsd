@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CommandScheduler.Infrastructure.Server.DataContracts" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CommandScheduler.Infrastructure.Server.Response" />
+  <xs:element name="RegisterClientMachine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CommandScheduler.Infrastructure.Server.DataContracts" minOccurs="0" name="regInfo" nillable="true" type="q1:ClientMachineRegisterInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterClientMachineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CommandScheduler.Infrastructure.Server.Response" minOccurs="0" name="RegisterClientMachineResult" nillable="true" type="q2:CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnReceiveCommand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CommandScheduler.Infrastructure.Server.DataContracts" minOccurs="0" name="command" nillable="true" type="q3:CommandInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BroadCastCommand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CommandScheduler.Infrastructure.Server.DataContracts" minOccurs="0" name="command" nillable="true" type="q4:CommandInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BroadCastCommandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CommandScheduler.Infrastructure.Server.Response" minOccurs="0" name="BroadCastCommandResult" nillable="true" type="q5:CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

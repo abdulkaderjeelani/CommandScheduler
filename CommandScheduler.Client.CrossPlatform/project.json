@@ -1,0 +1,38 @@
+{
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.1"
+    },
+    "System.Net.NetworkInformation": "4.3.0"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "CommandScheduler.Client.Portable": {
+          "target": "project"
+        },
+        "System.ServiceModel.Duplex": "4.0.1",
+        "System.ServiceModel.Http": "4.1.0",
+        "System.ServiceModel.NetTcp": "4.1.0",
+        "System.ServiceModel.Security": "4.0.1",
+        "System.Xml.XmlSerializer": "4.0.11"
+      },
+      "imports": "dnxcore50"
+    }
+  },
+  "runtimes": {
+    "win8-x64": {},
+    "win8-x86": {},
+    "win81-x64": {},
+    "win81-x86": {},
+    "osx.10.10-x64": {},
+    "osx.10.11-x64": {},
+    "rhel.7.1-x64": {},
+    "rhel.7.2-x64": {}
+  },
+  "version": "1.0.0-*"
+}

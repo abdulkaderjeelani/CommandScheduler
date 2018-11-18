@@ -1,0 +1,13 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.CSharp": "4.3.0",
+    "System.Net.NetworkInformation": "4.1.0",
+    "System.Reactive": "3.1.1",
+    "System.Threading.Tasks.Parallel": "4.3.0",
+    "System.Threading.Timer": "4.3.0"
+  },
+  "frameworks": {
+    "netstandard1.3": {}
+  }
+}

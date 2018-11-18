@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CE8563B-3472-4A82-9E94-355F82E23C88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommandScheduler.Persistence</RootNamespace>
+    <AssemblyName>CommandScheduler.Persistence</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\CommandSchedulerReadRepository.cs" />
+    <Compile Include="Adapters\CommandSchedulerRepository.cs" />
+    <Compile Include="PersistenceRegistrator.cs" />
+    <Compile Include="Database\ICommandSchedulerDb.cs" />
+    <Compile Include="EntityFramework\CommandSchedulerDataContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CommandScheduler.Application\CommandScheduler.Application.csproj">
+      <Project>{D817B7EB-B648-4A20-B6AB-D2F9F478EC87}</Project>
+      <Name>CommandScheduler.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommandScheduler.Core\CommandScheduler.Core.csproj">
+      <Project>{f6b84c08-5bb4-4eb7-9e4c-bb3a903e1272}</Project>
+      <Name>CommandScheduler.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommandScheduler.SharedKernel\CommandScheduler.SharedKernel.csproj">
+      <Project>{262E4DD3-DAA8-420D-9854-7ADABE52D756}</Project>
+      <Name>CommandScheduler.SharedKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommandScheduler.Utilities\CommandScheduler.Utilities.csproj">
+      <Project>{8FB0E612-F402-4FC3-871F-7C89BF58FB69}</Project>
+      <Name>CommandScheduler.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
